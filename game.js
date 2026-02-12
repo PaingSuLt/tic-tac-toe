@@ -56,7 +56,7 @@ function Control(player1 = "Player1", player2 = "Player2") {
 
         if (!board.getBoard().includes("")) {
             gameOver = true;
-            return {mark, winner: "Draw"};
+            return {mark, winner: "Draw"}; 
         }
 
         //switch players
@@ -80,8 +80,7 @@ function Display() {
     boardId.addEventListener('click', e => {
         const id = e.target.id;
 
-        const result = game.switchTurn(Number(id));
-
+        const result = game.switchTurn(Number(id)); 
         if (result) {
             e.target.textContent = result.mark;
 
